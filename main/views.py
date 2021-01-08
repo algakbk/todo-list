@@ -5,6 +5,3 @@ def homepage(request):
 
 def test(request):
     return render(request, "test.html")
-
-def go(request):
-    return render(request, "go.html")
