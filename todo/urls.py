@@ -24,9 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", homepage, name="home"),
     path("test", test, name="test"),
-    path("books/", book, name="books"),
-    path("add_book/", add_book, name="add_book"),
-    path("add-books/", add_books, name="add-books"),
     path("add-todo/", add_todo, name="add-todo"),
     path("delete-todo/<id>/", delete_todo, name="delete-todo"),
     path("mark-todo/<id>/", mark_todo, name="mark-todo")
