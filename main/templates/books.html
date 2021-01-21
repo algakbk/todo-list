@@ -1,17 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
 </head>
 <body>
-    {% for book in book_list %}
 
-    <h2>Title: {{ book.title }}</h4>
-    <h4>Price: {{ book.price }}</h4>
-    <p>Added date: {{ book.created_at }}</p>
-       
-    {% endfor %}
+    <section>
+            <div class="todo_container">
+
+            {% for book in book_list %}
+            <div class="todo_item">
+                <div class="todo_item_header">
+                    <div class="action_buttons">
+                        <img src="{% static './img/img2.jpg' %}" />
+                    </div>
+                    <br>
+                    <h4>{{ book.book_title }}</h4>
+                </div>
+                <div class="todo_item_footer">
+                    <p>{{ book.price }}</p>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </body>
 </html>
